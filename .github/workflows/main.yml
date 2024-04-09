@@ -4,24 +4,22 @@ on:
   push:
     branches:
       - zapscan    
-    Schedule: 
-       - cron: '3 13 * * *'
-      
+  schedule: 
+     - cron: '10 13 * * *'
+     
 jobs:
   Zap-Scan:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout
-        uses: sanjeeveejayabalan/action:latest
-
-      - name: ZAP Scan
-        uses: ghcr.io/zaproxy/zaproxy:stable
+      - name: ZAP Scan  
+        uses: zaproxy/action-baseline@v0.10.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          target: 'https://www.zaproxy.org'
+          docker_name: 'naveen2131/action:zap'
+          target: 'https://localhost:3000'
           rules_file_name: '.zap/rules.tsv'
-          cmd_options: '-a'
+          cmd_options: '-a -x'
             
       # - name: Checkout repository
       #   uses: actions/checkout@v2
