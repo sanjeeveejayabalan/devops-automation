@@ -2,7 +2,7 @@ name: ci.yml
 
 on:   
   schedule: 
-    - cron: '22 13 * * *'
+    - cron: '55 18 * * *'
      
 jobs:
   Zap-Scan:
