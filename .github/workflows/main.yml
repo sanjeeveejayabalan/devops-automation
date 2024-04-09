@@ -1,11 +1,8 @@
 name: ci.yml
 
-on:
-  # push:
-  #   branches:
-  #     - zapscan    
+on:   
   schedule: 
-     - cron: '10 13 * * *'
+    - cron: '22 13 * * *'
      
 jobs:
   Zap-Scan:
