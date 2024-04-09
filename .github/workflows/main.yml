@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - zapscan    
-    schedule:
-       - cron: '03 13 * * *'
+    Schedule: 
+       - cron: '3 13 * * *'
       
 jobs:
   Zap-Scan:
