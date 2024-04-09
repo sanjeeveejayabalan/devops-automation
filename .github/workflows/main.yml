@@ -1,11 +1,10 @@
-name: ci.yml
-
+name: cronjob
 on:   
   schedule: 
-    - cron: '55 18 * * *'
+    - cron: '* * * * *'
      
 jobs:
-  Zap-Scan:
+  cron:
     runs-on: ubuntu-latest
     
     steps:
