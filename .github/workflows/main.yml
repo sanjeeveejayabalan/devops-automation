@@ -6,7 +6,7 @@ on:
 jobs:
   sample_job:
     name: Sample Job
-    runs-on: generic-ci
+    runs-on: ubuntu-latest
     steps:
       - name: Display Current Time
         run: echo "The current time is $(date)"
