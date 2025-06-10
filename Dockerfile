@@ -5,3 +5,4 @@ ENV PASSWORD=Test@123i4
 ENV ApiKey=zaCELgL. 0imfnc8mVLWwsAawjYr4Rx-Af50DDqtlx
 ADD target/devops-integration.jar devops-integration.jar
 ENTRYPOINT ["java","-jar","/devops-integration.jar"]
+Test
